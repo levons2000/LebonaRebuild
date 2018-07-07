@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="add_image_text_size">20sp</dimen>
+    <dimen name="recycler_padding">55dp</dimen>
+    <dimen name="comment_name_size">20sp</dimen>
+    <dimen name="list_view_height">80dp</dimen>
+    <dimen name="comment_text_margin">15dp</dimen>
+    <dimen name="padding_for_name">10dp</dimen>
+    <dimen name="next_comment">8dp</dimen>
+    <dimen name="elevation_for_card">3dp</dimen>
+    <dimen name="height_for_image">200dp</dimen>
+    <dimen name="relative_height">60dp</dimen>
+    <dimen name="like_padding">10dp</dimen>
+    <dimen name="like_text_margin">20dp</dimen>
+    <dimen name="like_counter_size">12sp</dimen>
+    <dimen name="margin_for_comment_counter">100dp</dimen>
+    <dimen name="share_button_margin">21dp</dimen>
+</resources>

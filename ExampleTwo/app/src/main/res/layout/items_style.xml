@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:elevation="@dimen/elevation_for_card">
+
+        <ImageView
+            android:id="@+id/imageforitem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_for_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/relative_height"
+            android:layout_gravity="bottom">
+
+            <ImageButton
+                android:id="@+id/likebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/sharebutton"
+                android:background="@color/cardview_light_background"
+                android:paddingLeft="@dimen/like_padding"
+                android:src="@drawable/seri_sirt_24dp" />
+
+            <ImageButton
+                android:id="@+id/commentbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/commentcountertext"
+                android:layout_alignTop="@+id/likebutton"
+                android:background="@color/cardview_light_background"
+                android:src="@drawable/ic_comment_black_24dp" />
+
+            <TextView
+
+                android:id="@+id/likecountertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/likebutton"
+                android:layout_marginLeft="@dimen/like_text_margin"
+                android:text="@string/zero"
+                android:textSize="@dimen/like_counter_size"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+
+                android:id="@+id/commentcountertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/likebutton"
+                android:layout_marginLeft="@dimen/margin_for_comment_counter"
+                android:text="@string/zero"
+                android:textSize="@dimen/like_counter_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/sharebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/share_button_margin"
+                android:background="@color/blue"
+                android:text="@string/share"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/commentlistview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_view_height"
+            android:visibility="gone">
+
+        </ListView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/commentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/commentatorname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_for_comment" />
+
+        <EditText
+            android:id="@+id/newcommenttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_for_new_comment" />
+
+        <Button
+            android:id="@+id/addnewcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_comment" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
